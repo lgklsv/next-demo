@@ -1,0 +1,12 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "starWars": "Star Wars"
+  },
+  "HomePage": {
+    "title": "Hello world!"
+  },
+  "StarWarsPage": {
+    "title": "Star Wars"
+  }
+}

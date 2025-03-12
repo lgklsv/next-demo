@@ -1,0 +1,12 @@
+{
+  "Navigation": {
+    "home": "Главная",
+    "starWars": "Звездные войны"
+  },
+  "HomePage": {
+    "title": "Привет мир!"
+  },
+  "StarWarsPage": {
+    "title": "Звездные войны"
+  }
+}
