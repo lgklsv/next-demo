@@ -1,7 +1,18 @@
-import { useTranslations } from "next-intl";
+import { Locale, useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 
-export default function Home() {
+type Props = {
+  params: Promise<{ locale: Locale }>;
+};
+
+export default function Home({ params }: Props) {
+  const { locale } = use(params);
+
   const t = useTranslations("HomePage");
+
+  // Enable static rendering
+  setRequestLocale(locale);
 
   return (
     <div>
