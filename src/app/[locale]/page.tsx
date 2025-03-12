@@ -9,10 +9,10 @@ type Props = {
 export default function Home({ params }: Props) {
   const { locale } = use(params);
 
-  const t = useTranslations("HomePage");
-
   // Enable static rendering
   setRequestLocale(locale);
+
+  const t = useTranslations("HomePage");
 
   return (
     <div>
