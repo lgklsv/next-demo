@@ -1,26 +1,15 @@
-"use client";
-
-import { Link, usePathname } from "@/i18n/navigation";
+import NavigationLink from "./NavigationLink";
 
 export default function Nav() {
-  const pathname = usePathname();
-
   return (
     <nav className="flex flex-col justify-start space-y-2">
-      <Link
-        href="/"
-        className={`w-max px-4 py-2 rounded-xl ${pathname === "/" ? "bg-blue-500" : ""}`}
-        prefetch
-      >
+      <NavigationLink href="/" prefetch>
         Home
-      </Link>
-      <Link
-        href="/star-wars"
-        className={`w-max px-4 py-2 rounded-xl ${pathname === "/star-wars" ? "bg-blue-500" : ""}`}
-        prefetch
-      >
+      </NavigationLink>
+
+      <NavigationLink href="/star-wars" prefetch>
         Star Wars
-      </Link>
+      </NavigationLink>
     </nav>
   );
 }
